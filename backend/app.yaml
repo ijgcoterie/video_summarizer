@@ -1,0 +1,9 @@
+runtime: python39  # or python38, python37
+entrypoint: gunicorn -b :$PORT app.main:app  # Update this with your app entry point
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: auto
