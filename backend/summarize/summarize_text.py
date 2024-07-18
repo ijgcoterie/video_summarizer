@@ -1,6 +1,9 @@
 import openai
+from dotenv import load_dotenv
+import os
 
-openai.api_key = 'sk-proj-Age828iUtNICN0s9ouNvT3BlbkFJfOYrALOypBYRwMuGNsf6'
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def summarize_text(text, context=""):
     system_prompt = "You are a helpful video summarizer. You receive a video transcript and optional context from the requester and provide a summary of the transcript."
