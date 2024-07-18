@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Summary = ({ summary }) => {
+const Summary = ({ summary }: any) => {
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-6">
       <div className="px-6 py-4">

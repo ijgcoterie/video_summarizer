@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const UploadForm = ({ onSummary }) => {
+const UploadForm = ({ onSummary }: any) => {
   const [file, setFile] = useState(null);
   const [context, setContext] = useState('');
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: any) => {
     setFile(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (!file) return;
 
@@ -49,7 +49,7 @@ const UploadForm = ({ onSummary }) => {
               value={context}
               onChange={(e) => setContext(e.target.value)}
               className="mt-2 px-3 py-2 border rounded-md w-full"
-              rows="4"
+              rows={4}
               placeholder="Provide any context here..."
             ></textarea>
           </div>
